@@ -21,3 +21,8 @@ formEl.addEventListener('submit', function (event) {
   }
   searchInput.value = '';
 });
+
+const lightbox = new SimpleLightbox('.gallery-link', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
