@@ -16,5 +16,4 @@ export function createMurcup(data) {
     )
     .join('');
   container.innerHTML = murcup;
-  lightbox.refresh();
 }
