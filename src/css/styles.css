@@ -23,13 +23,14 @@
 .gallery-link {
   display: block;
   text-decoration: none;
+  width: 360px;
+  height: 240px;
 }
 
 .gallery-image {
   width: 100%;
-  display: block;
-  height: auto;
-  cursor: pointer;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-info {
