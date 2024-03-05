@@ -1,8 +1,6 @@
 const API_KEY = '42651911-b9e9cf23b752713c606cec899';
 const BASE_URL = 'https://pixabay.com/api/';
 
-import { createMurcup } from './render-functions';
-
 export function getPhotos(searchQuery) {
   const searchparams = new URLSearchParams({
     key: API_KEY,
@@ -12,13 +10,10 @@ export function getPhotos(searchQuery) {
     orientation: 'horizontal',
   });
 
-  fetch(`${BASE_URL}?${searchparams}`)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(response.status);
-      }
-      return response.json();
-    })
-    .then(data => createMurcup(data))
-    .catch(error => console.log(error));
+  return fetch(`${BASE_URL}?${searchparams}`).then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  });
 }

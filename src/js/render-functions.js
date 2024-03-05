@@ -1,4 +1,4 @@
-export function createMurcup(data) {
+export function createMurkup(data) {
   const container = document.querySelector('.gallery-container');
   const murcup = data.hits
     .map(
